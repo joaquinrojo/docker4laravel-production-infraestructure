@@ -26,4 +26,6 @@ spec:
         - containerPort: 80
       - image: laravel-app-php
         name: php 
-#            name: laravel-app-secret
+        envFrom:
+        - secretRef:
+            name: laravel-app-secret
