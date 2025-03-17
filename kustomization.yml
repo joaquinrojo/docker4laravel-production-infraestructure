@@ -1,0 +1,19 @@
+namespace: docker4laravel
+
+
+resources:
+  - applications/namespace.yml
+  - applications/laravel-app/web.yml
+  - applications/laravel-app/svc.yml
+images:
+  - name: laravel-app-nginx
+    newName: jrojofigueroa/docker4laravel-nginx
+    newTag: "latest"
+  - name: laravel-app-php
+    newName: jrojofigueroa/docker4laravel-php
+    newTag: "latest"
+
+
+secretGenerator:
+  - name: laravel-app-secret
+    env: .env
