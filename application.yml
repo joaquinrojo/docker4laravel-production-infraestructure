@@ -7,11 +7,11 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/joaquinrojo/docker4laravel-production-infraestructure.git
+    repoURL: 'https://github.com/joaquinrojo/docker4laravel-production-infraestructure.git'
     targetRevision: HEAD
     path: dev
   destination: 
-    server: https://kubernetes.default.svc
+    server: 'https://kubernetes.default.svc'
     namespace: myapp-laravel3
 
   syncPolicy:
